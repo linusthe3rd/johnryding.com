@@ -6,20 +6,26 @@ require 'rubygems' # required to place gems on LOAD_PATH
 require 'sinatra' # web framework
 require 'rdiscount' # markdown template engine
 
+require "logger" # Ruby's logging lib
+
 ################################################################################
-# Constants                                                                    #
+# Sinatra Settings                                                             #
 ################################################################################
 
-WEB_APP_ROOT = File.dirname(__FILE__)
+# Set the directory to server static files (css, js, images) from.
+set :public_folder, File.join( File.dirname(__FILE__), 'assets' )
+
+################################################################################
+# Constants / Globals                                                          #
+################################################################################
+
+WEB_APP_ROOT = settings.root
 MARKDOWN_DIR = File.join( WEB_APP_ROOT, "text" )
 CACHE_DIR = File.join( WEB_APP_ROOT, "cache" )
 
 ################################################################################
 # Web App Logic                                                                #
 ################################################################################
-
-# Set the directory to server static files (css, js, images) from.
-set :public_folder, File.join( File.dirname(__FILE__), 'assets' )
 
 get '/' do
   @title = "Home"

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title><%= @title %> | Johnryding.com</title>
+  
+      <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <% unless ( defined?(text) ).nil? %>
+          <%= text %>
+        <% else %>
+          <%= yield %>
+        <% end %>
+    <body>
+</html>

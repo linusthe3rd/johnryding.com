@@ -1,0 +1,19 @@
+html, body {
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 12pt;
+  height: 100%;
+}
+
+body {
+  background: #FDFCFA;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 900px;
+  margin: auto;
+}

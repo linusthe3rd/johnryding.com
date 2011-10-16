@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <meta charset="utf-8">
-      <link rel="author" href="http://johnryding.com/about">
-      <link rel="icon" href="http://www.gravatar.com/avatar/b6edd6d4a4d6c23f7377fdfeed73e348.png">
+      <meta charset="utf-8" />
+      <meta name="google-site-verification" content="XJAAIJa9rDViw4-T4rGQDpCfMeqt1qWyQmHYRH2EVzY" />
+      <link rel="shortcut icon" href="http://www.gravatar.com/avatar/b6edd6d4a4d6c23f7377fdfeed73e348.png">
       <title>John Ryding | <%= @title %></title>
-  
+      <meta name="keywords" content="john ryding, john linus ryding, john, linus, ryding, programmer, programming, software engineer, software developer, developer, engineer, virginia tech, apple, how-to, how to, guide, articles, youtube, design, graphic design, typography, linux, htpc, technology, javascript, ruby, web development, web developer, cloud, devops"/>
+        
       <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+      <link href='css/common.css' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <% unless ( defined?(text) ).nil? %>
-          <%= text %>
-        <% else %>
-          <%= yield %>
-        <% end %>
+      <div id="wrap">
+        <div class="left-col">
+          <a href="http://johnryding.com/" rel="home">
+            <h1 id="site-title">John Ryding</h1>
+          </a>
+        
+          <nav>
+            <ul id="global-nav-list">
+              <li class="global-nav-item">
+                <a href="/" rel="home">Home</a>
+              </li>
+              <li class="global-nav-item">
+                <a href="/about" rel="author">About</a>
+              </li>
+              <li class="global-nav-item">
+                <a href="http://blog.johnryding.com">Blog</a>
+              </li>
+              <li class="global-nav-item">
+                <a href="/projects">Projects</a>
+              </li>
+              <li class="global-nav-item">
+                <a href="/setup">Setup</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- End Nav -->
+      
+        <div id="page-body" class="right-col">
+          <% unless ( defined?(text) ).nil? %>
+            <%= text %>
+          <% else %>
+            <%= yield %>
+          <% end %>
+        </div>
+        <!-- End Main Content -->
+      
+        <footer>&copy; John Ryding, 2011</footer>
+        <!-- End Footer -->
+      </div>
     <body>
 </html>

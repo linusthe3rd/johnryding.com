@@ -1,3 +1,6 @@
+Setup
+-----
+
 I'm a big fan of [The Setup](http://usesthis.com/) and seeing how people get things done. 
 
 Here you will find my current setup.

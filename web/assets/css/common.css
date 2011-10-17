@@ -29,6 +29,7 @@ a, a:link, a:visited {
 a:hover {
   color: #333333;
   opacity: 1;
+  text-decoration: underline;
 }
 p {
   margin: 10px 0;
@@ -57,7 +58,7 @@ p {
 }
 #wrap > footer {
   float: left;
-  margin-top: 20px;
+  margin: 20px 0;
   width: 100%;
 }
 
@@ -65,19 +66,19 @@ p {
 #site-title, #global-nav {
   font-family: 'Reenie Beanie', cursive;
 }
-
+#site-title > a, .global-nav-item > a:hover{
+  text-decoration: none;
+}
 #site-title {
   border-bottom: 1px solid #333333;
   margin-bottom: 15px;
   padding: 0 15px;
 }
-
 #global-nav-list {
   list-style-type: none;
   font-size: 18pt;
   text-align: center;
 }
-
 /******** Page Content ***********/
 #page-body {
  margin-top: 60px; 

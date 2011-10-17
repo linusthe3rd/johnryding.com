@@ -9,13 +9,18 @@
         
       <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
       <link href='css/common.css' rel='stylesheet' type='text/css'>
+      <% unless ( defined?(text) ).nil? %>
+      <link href='css/markup_content.css' rel='stylesheet' type='text/css'>
+      <% else %>
+      <link href='css/projects.css' rel='stylesheet' type='text/css'>
+      <% end %>
     </head>
     <body>
       <div id="wrap">
       
         <div class="left-col">
           <div id="site-title">
-            <a href="http://johnryding.com/" rel="home">
+            <a href="/" rel="home">
               <h1 class="color-black">John Ryding</h1>
             </a>
           </div>

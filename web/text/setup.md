@@ -23,7 +23,7 @@ Software
 * Safari - Web browser
 * [Textmate](http://macromates.com/) - Text editor
 * [Droid Sans Mono](http://code.google.com/webfonts/specimen/Droid+Sans+Mono) - Coding font
-* [Git](http://git-scm.com/) + [Github](http://git-scm.com/) - SCM
+* [Git](http://git-scm.com/) + [Github](http://github.com/) - SCM
 * [Rational Team Concert](https://jazz.net/projects/rational-team-concert/?ref_content=ribbon) - Eclipse + SCM, bug control, and planning for work projects
 * [1Password](http://itunes.apple.com/us/app/1password/id443987910?mt=12) - Password manager
 * [Path Finder](http://www.cocoatech.com/) - Finder replacement

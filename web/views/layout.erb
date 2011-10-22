@@ -5,7 +5,8 @@
       <meta name="google-site-verification" content="XJAAIJa9rDViw4-T4rGQDpCfMeqt1qWyQmHYRH2EVzY" />
       <link rel="shortcut icon" href="http://www.gravatar.com/avatar/b6edd6d4a4d6c23f7377fdfeed73e348.png">
       <title>John Ryding | <%= @title %></title>
-      <meta name="keywords" content="john ryding, john linus ryding, john, linus, ryding, programmer, programming, software engineer, software developer, developer, engineer, virginia tech, apple, how-to, how to, guide, articles, youtube, design, graphic design, typography, linux, htpc, technology, javascript, ruby, web development, web developer, cloud, devops"/>
+      <meta name="keywords" content="john ryding, john linus ryding, john, linus, ryding, programmer, programming, software engineer, software developer, developer, engineer, virginia tech, how-to, how to, guide, articles, design, graphic design, typography, linux, htpc, technology, javascript, ruby, web development, web developer, cloud, devops<%= @description %>"/>
+      <meta name="description" content="<%= @description %>">
         
       <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
       <link href='css/common.css' rel='stylesheet' type='text/css'>
@@ -58,6 +59,22 @@
       
         <footer id="copyright" class="color-gray">&copy; 2011 John Ryding</footer>
         <!-- End Footer -->
+        
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-19806138-1']);
+          _gaq.push(['_setDomainName', '.johnryding.com']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
       </div>
     <body>
 </html>

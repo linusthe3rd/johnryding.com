@@ -5,8 +5,7 @@ require 'rubygems' # required to place gems on LOAD_PATH
 
 require 'sinatra' # web framework
 require 'rdiscount' # markdown template engine
-
-require "logger" # Ruby's logging lib
+require 'xml-sitemap' # markdown template engine
 
 ################################################################################
 # Sinatra Settings                                                             #
@@ -29,23 +28,51 @@ CACHE_DIR = File.join( WEB_APP_ROOT, "cache" )
 
 get '/' do
   @title = "Home"
+  @description = "Hi there! My name is John and I'm a software engineer."
+  @keywords = ""
   erb :layout, :locals => { :text => get_markdown_content("home") }
 end
 
 get '/about' do
   @title = "About"
+  @description = "My name is John Ryding. I am a software engineer that currently works with IBM and lives in Raleigh, NC."
+  @keywords = ""
   erb :layout, :locals => { :text => get_markdown_content("about") }
 end
 
 get '/setup' do
   @title = "Setup"
+  @description = " This is a list of all of the tools I use in my current development setup."
+  @keywords = ", The Setup, usesthis.com, mac, os x, mac apps, mac applications, mac software, applications, Haworth Zody, zody, steelcase, steelcase martin, office, macbook pro, macbook, software, iphone, iphone 4, development environment, text editors, textmate, apple, github"
   erb :layout, :locals => { :text => get_markdown_content("setup") }
 end
 
 get '/projects' do
   @title = "Projects"
-  erb :projects
+  @description = "Here is a list of significant projects that I have created or contributed to."
+  @keywords = ", github"#", shakespeare's playground, opengl, javascript, html5, css3"
+  #erb :projects
+  erb :layout, :locals => { :text => get_markdown_content("projects") }
 end
+
+# get '/sitemap.xml' do
+#   map = XmlSitemap.map('johnryding.com', {:root => false}) do |m|
+#     m.add(:url => '/')
+#     m.add(:url => '/about')
+#     m.add(:url => '/projects', :period => :monthly)
+#     m.add(:url => '/setup', :period => :monthly)
+#     m.add(:url => 'http://blog.johnryding.com/', :period => :daily)
+#   end
+#  
+#   headers['Content-Type'] = 'text/xml'
+#   map.render(:builder)
+# end
+
+# Handle 404 Responses
+not_found do
+  erb :layout, :locals => { :text => get_markdown_content("404") }
+end
+
 
 ################################################################################
 # Helper Methods                                                               #

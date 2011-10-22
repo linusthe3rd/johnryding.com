@@ -5,7 +5,9 @@ require 'rubygems' # required to place gems on LOAD_PATH
 
 require 'sinatra' # web framework
 require 'rdiscount' # markdown template engine
-require 'xml-sitemap' # markdown template engine
+require 'xml-sitemap' # library to dynamically create sitemaps
+require "cgi" # required for xml-sitemap
+
 
 ################################################################################
 # Sinatra Settings                                                             #
@@ -55,18 +57,16 @@ get '/projects' do
   erb :layout, :locals => { :text => get_markdown_content("projects") }
 end
 
-# get '/sitemap.xml' do
-#   map = XmlSitemap.map('johnryding.com', {:root => false}) do |m|
-#     m.add(:url => '/')
-#     m.add(:url => '/about')
-#     m.add(:url => '/projects', :period => :monthly)
-#     m.add(:url => '/setup', :period => :monthly)
-#     m.add(:url => 'http://blog.johnryding.com/', :period => :daily)
-#   end
-#  
-#   headers['Content-Type'] = 'text/xml'
-#   map.render(:builder)
-# end
+get '/sitemap.xml' do
+  map = XmlSitemap::Map.new('johnryding.com', :root => false)
+  map.add('http://blog.johnryding.com/', :period => :daily, :priority => 0.9)
+  map.add('/about', :priority => 0.8)
+  map.add('/projects', :period => :monthly, :priority => 0.7)
+  map.add('/setup', :period => :monthly, :priority => 0.6)
+  
+  headers['Content-Type'] = 'text/xml'
+  map.render
+end
 
 # Handle 404 Responses
 not_found do

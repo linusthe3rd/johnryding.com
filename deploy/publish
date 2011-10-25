@@ -2,13 +2,25 @@
 
 # Check out the git repo if it's a new machine
 unless File.directory?(".git") then
+  puts "STATUS: Cloning johnryding.com git repo....."
   `git clone git@github.com:strife25/johnryding.com.git ./`
   `git remote add upstream git@github.com:strife25/johnryding.com.git`
+  puts "STATUS: Git clone done"
 end
 
 # Get latest updates from git
+puts "STATUS: Pulling in latest changes..."
 `git fetch upstream`
 `git merge upstream/master`
+puts "STATUS: Git pull done."
+
+puts "STATUS: Installing project gems...."
+unless Gem.available?("bundler") then
+  `gem install bundler --no-ri --no-rdoc -q`
+end
+
+`bundle install --quiet`
+puts "STATUS: Gem installation complete."
 
 # Restart Passenger
 unless File.directory?("tmp") then
@@ -16,5 +28,6 @@ unless File.directory?("tmp") then
 end
 
 `touch tmp/restart`
+puts "STATUS: Restarted Passenger"
 
 

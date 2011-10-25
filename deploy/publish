@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
 require "rubygems"
 
+ROOT_DIR = "~/johnryding.com"
+
 # Check out the git repo if it's a new machine
-unless File.directory?("~/johnryding.com/.git") then
+unless File.directory?("#{ROOT_DIR}/.git") then
   puts "STATUS: Cloning johnryding.com git repo....."
-  `git clone git@github.com:strife25/johnryding.com.git ~/johnryding.com/`
+  `git clone git@github.com:strife25/johnryding.com.git #{ROOT_DIR}/`
   `git remote add upstream git@github.com:strife25/johnryding.com.git`
   puts "STATUS: Git clone done"
 end
@@ -24,8 +26,8 @@ end
 puts "STATUS: Gem installation complete."
 
 # Restart Passenger
-unless File.directory?("tmp") then
-  Dir.mkdir("tmp")
+unless File.directory?("#{ROOT_DIR}/tmp") then
+  Dir.mkdir("#{ROOT_DIR}/tmp")
 end
 
 `touch tmp/restart`

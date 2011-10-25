@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require "rubygems"
 
-ROOT_DIR = "~/johnryding.com"
+ROOT_DIR = "/home/johnryding/johnryding.com"
 
 # Check out the git repo if it's a new machine
 unless File.directory?("#{ROOT_DIR}/.git") then

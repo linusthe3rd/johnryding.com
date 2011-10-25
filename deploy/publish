@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require "rubygems"
 
 # Check out the git repo if it's a new machine
 unless File.directory?(".git") then

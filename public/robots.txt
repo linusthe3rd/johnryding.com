@@ -1,1 +1,1 @@
-Sitemap: http://johnrydin.com/sitemap.xml
+Sitemap: http://johnryding.com/sitemap.xml

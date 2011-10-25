@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+# Check out the git repo if it's a new machine
+unless File.directory?(".git") then
+  `git clone git@github.com:strife25/johnryding.com.git ./`
+  `git remote add upstream git@github.com:strife25/johnryding.com.git`
+end
+
+# Get latest updates from git
+`git fetch upstream`
+`git merge upstream/master`
+
+# Restart Passenger
+unless File.directory?("tmp") then
+  Dir.mkdir("tmp")
+end
+
+`touch tmp/restart`
+
+

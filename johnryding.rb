@@ -14,7 +14,7 @@ require "cgi" # required for xml-sitemap
 ################################################################################
 
 # Set the directory to server static files (css, js, images) from.
-set :public_folder, File.join( File.dirname(__FILE__), 'assets' )
+#set :public_folder, File.join( File.dirname(__FILE__), 'assets' )
 
 ################################################################################
 # Constants / Globals                                                          #

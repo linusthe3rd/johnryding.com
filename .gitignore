@@ -1,1 +1,2 @@
-web/cache/
+cache/
+.DS_Store

@@ -1,9 +1,0 @@
-Sitemap: http://johnrydin.com/sitemap.xml
-  
-User-agent: *
-  Disallow: /web/cache/
-  Disallow: /web/config.ru
-  Disallow: /deploy/
-  Disallow: /Gemfile
-  Disallow: /Gemfile.lock
-  Disallow: /Gemfile.lock

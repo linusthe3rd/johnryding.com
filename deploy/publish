@@ -2,9 +2,9 @@
 require "rubygems"
 
 # Check out the git repo if it's a new machine
-unless File.directory?(".git") then
+unless File.directory?("~/johnryding.com/.git") then
   puts "STATUS: Cloning johnryding.com git repo....."
-  `git clone git@github.com:strife25/johnryding.com.git ./`
+  `git clone git@github.com:strife25/johnryding.com.git ~/johnryding.com/`
   `git remote add upstream git@github.com:strife25/johnryding.com.git`
   puts "STATUS: Git clone done"
 end

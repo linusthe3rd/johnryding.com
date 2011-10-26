@@ -1,1 +1,4 @@
 Sitemap: http://johnryding.com/sitemap.xml
+
+User-agent: *
+Allow: /

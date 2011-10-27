@@ -30,7 +30,7 @@ unless File.directory?("#{ROOT_DIR}/tmp") then
   Dir.mkdir("#{ROOT_DIR}/tmp")
 end
 
-`touch tmp/restart`
+`touch #{ROOT_DIR}/tmp/restart`
 puts "STATUS: Restarted Passenger"
 
 

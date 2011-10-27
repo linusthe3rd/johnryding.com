@@ -1,0 +1,11 @@
+header, nav, article, footer, address {
+  display:block;
+}
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #999999;
+}
+a:hover {
+  color: #333333;
+  text-decoration: underline;
+}

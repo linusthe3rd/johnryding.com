@@ -13,6 +13,7 @@ Contact Me
 * [LinkedIn](http://www.linkedin.com/in/johnryding)
 * Github: [strife25](https://github.com/strife25)
 * [Facebook](http://www.facebook.com/john.ryding)
+* <a rel="me" href="https://plus.google.com/100076290615789859058/about">Google+</a>
 * [Reddit](http://www.reddit.com/user/strife25/)
 
 

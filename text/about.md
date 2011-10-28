@@ -9,12 +9,12 @@ Contact Me
 ----------
 
 * Email: <linus@johnryding.com>
-* Twitter: [strife25](www.twitter.com/strife25)
-* [LinkedIn](http://www.linkedin.com/in/johnryding)
-* Github: [strife25](https://github.com/strife25)
-* [Facebook](http://www.facebook.com/john.ryding)
+* Twitter: <a rel="me" href="http://www.twitter.com/strife25">strife25</a>
+* <a rel="me" href="http://www.linkedin.com/in/johnryding">LinkedIn</a>
+* Github: <a rel="me" href="https://github.com/strife25">strife25</a>
+* <a rel="me" href="http://www.facebook.com/john.ryding">Facebook</a>
 * <a rel="me" href="https://plus.google.com/100076290615789859058/about">Google+</a>
-* [Reddit](http://www.reddit.com/user/strife25/)
+* <a rel="me" href="http://www.reddit.com/user/strife25/">Reddit</a>
 
 
 Disclaimer

@@ -53,8 +53,8 @@ get '/projects' do
   @title = "Projects"
   @description = "Here is a list of significant projects that I have created or contributed to."
   @keywords = ", github"#", shakespeare's playground, opengl, javascript, html5, css3"
-  #erb :projects
-  erb :layout, :locals => { :text => get_markdown_content("projects") }
+  erb :projects
+  #erb :layout, :locals => { :text => get_markdown_content("projects") }
 end
 
 get '/sitemap.xml' do

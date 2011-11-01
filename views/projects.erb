@@ -1,0 +1,45 @@
+<div id="slide-container">
+  <div id="slides">
+    <div id="project-listing" class="slide">
+        <article class="project-node left-col">
+          <header>
+            <h2>Shakespeare's Playground</h2>
+          </header>
+          <section class="project-summary">
+            An exploration I made to experiment with HTML5 syntax and @font-face.
+          </section>
+        </article>
+
+        <article class="project-node right-col">
+          <header>
+            <h2>Nocturnal Blacksburg</h2>
+          </header>
+          <section class="project-summary">
+            An experiment with CSS3 gradients and masks
+          </section>
+        </article>
+
+        <article class="project-node left-col">
+          <header>
+            <h2>OpenGL Animation Tool</h2>
+          </header>
+          <section class="project-summary">
+            An animation engine I wrote for an OpenGL class I took during college.
+          </section>
+        </article>
+    </div>
+    
+    <div id="slide2" class="next">
+      Test
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#project-listing").bind("click", function(e){
+      $("#project-listing").addClass("previous");
+      $("#slide2").removeClass("next");
+    });
+  });
+</script>
+

@@ -16,6 +16,8 @@ $(document).ready(function() {
       $("#"+slideId).addClass("next");
     }
   });
+  
+  $("#slides > .slide").addClass("slide-transition");
 });
 
 function getSlideId(node){

@@ -12,7 +12,7 @@ body {
   background: #FDFCFA;
   line-height: 1.5;
 }
-a, a:link, a:visited {
+a, a:link, a:visited, .link-effect {
   text-decoration: none;
   color: #333333;
   
@@ -26,7 +26,7 @@ a, a:link, a:visited {
   -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
 }
-a:hover {
+a:hover, .link-effect:hover {
   color: #333333;
   opacity: 1;
   text-decoration: underline;
@@ -86,6 +86,9 @@ p {
 
 /******** Footer ***********/
 #copyright {
-  text-align: center;
-  font-size: 8pt;
+/*  text-align: center;
+  font-size: 8pt;*/
+   text-align: center;
+   font-size: 7pt;
+   margin-top: 20px;
 }

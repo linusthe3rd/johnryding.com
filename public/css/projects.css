@@ -1,28 +1,32 @@
 /************* Start Slider Effect ****************/
+#wrap {
+  position:relative;
+}
 #slides {
   overflow: hidden;
   position: absolute;
-  width:40%;
+  width: 75%;
   height: 100%;
-  left: 35%;
-  top: 125px;
-}
-#slides > .slide {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  
-  display:block;
-  height:100%;
-  position:absolute;
-  width:100%;
-  z-index:0;
+  left: 18%;
+  top: 50px;
 }
 #slides > .next {
   margin-left: 9000px;
 }
 #slides > .previous {
   margin-left: -9000px;
+}
+#slides > .slide {  
+  display:block;
+  height:100%;
+  position:absolute;
+  width:100%;
+  z-index:0;
+}
+#slides > .slide-transition {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 /************* End Slider Effect ****************/
 
@@ -45,6 +49,11 @@
   border-radius:5px 5px 5px 5px;
   margin:-2px 2px 13px -2px;
   cursor: pointer;
+}
+#project-listing > .project-node:hover .link-effect {
+  color: #333333;
+  opacity: 1;
+  text-decoration:none;
 }
 #project-listing > .left-col {
   float: left;
@@ -74,14 +83,4 @@
   padding:3px;
   text-decoration:none;
 }
-/*
-#shakespeare-playground {
-  top: -50%;
-}
-#nocturnal-blacksburg {
-  top: -70%;
-}
-#opengl-animation-tool {
-  top: -90%;
-} */ 
 /************* End Project Description ************/

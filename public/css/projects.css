@@ -1,19 +1,11 @@
 /************* Start Slider Effect ****************/
-#slide-container {
- position:relative; 
- height:100%;
- width:100%;
- left:0px;
- top:0px;
- display:block;
-}
 #slides {
-  overflow:hidden;
-  position:relative;
-  width:100%;
-  height:100%;
-  left:0;
-  top:0;
+  overflow: hidden;
+  position: absolute;
+  width:40%;
+  height: 100%;
+  left: 35%;
+  top: 125px;
 }
 #slides > .slide {
   -webkit-transition: all 1s ease-in-out;
@@ -21,17 +13,20 @@
   transition: all 1s ease-in-out;
   
   display:block;
-  position:relative;
   height:100%;
+  position:absolute;
+  width:100%;
   z-index:0;
 }
 #slides > .next {
   margin-left: 9000px;
 }
 #slides > .previous {
-    margin-left: -9000px;
+  margin-left: -9000px;
 }
 /************* End Slider Effect ****************/
+
+/************* Start Main Project List **********/
 #project-listing {
   padding: 2px;
   overflow: hidden;
@@ -57,3 +52,35 @@
 #project-listing > .right-col {
   float: right;
 }
+/************* End Main Project List ************/
+
+/************* Start Project Description **********/
+.project-drescription {
+  margin-top:10px;
+}
+.project-drescription > .back-button {
+  text-decoration:none;
+  padding: 5px;
+}
+.project-drescription > .back-button:hover {
+  border: 2px solid #666;
+  -webkit-border-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius:5px 5px 5px 5px;
+  border-radius:5px 5px 5px 5px;
+  
+  padding:3px;
+  text-decoration:none;
+}
+/*
+#shakespeare-playground {
+  top: -50%;
+}
+#nocturnal-blacksburg {
+  top: -70%;
+}
+#opengl-animation-tool {
+  top: -90%;
+} */ 
+/************* End Project Description ************/

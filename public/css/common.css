@@ -43,6 +43,7 @@ p {
 
 /******** Page Layout ***********/
 #wrap {
+  height:100%;
   margin: auto;
   overflow: hidden;
   margin-top: 70px;

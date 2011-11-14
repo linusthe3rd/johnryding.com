@@ -68,6 +68,11 @@
 .project-drescription {
   margin-top:10px;
 }
+
+.project-drescription > header {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
 .project-drescription > .back-button {
   text-decoration:none;
   padding: 5px;
